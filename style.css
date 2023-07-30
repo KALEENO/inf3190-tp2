@@ -1,0 +1,477 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: white;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+
+header h1 {
+    font-size: 4rem;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+}
+
+#logo {
+    width: 110px;
+}
+
+nav {
+    margin: 0 25px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(250, 250, 250, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px rgba(100, 100, 100, 0.5);
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+  
+nav a:hover {
+    background-color: rgba(250, 250, 250, 0.6);
+    box-shadow: 0px 0px 30px rgba(50, 50, 50, 0.5);
+}
+
+nav a:active {
+    background-color: rgba(250, 250, 250, 0.8);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background: linear-gradient(to right, #56d6ef,#3d7eee);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}    
+
+#formulaire,
+#formulaire-resultat,
+#message-adieu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 500px;
+    padding: 40px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 1px solid #9a9a9a;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    color: black;
+    line-height: 1.7;
+}
+
+.contenu-formulaire {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-vide:empty {
+    display: none;
+}
+
+.contenu-formulaire label {
+    padding: 5px;
+}
+
+.contenu-formulaire input, 
+.contenu-formulaire select {
+    border-radius: 5px;
+    border: 2px solid #bdbdbd;
+    font-size: 16px;
+    padding: 10px;
+    padding-right: 35px;
+    width: 100%;
+    transition: border-color 0.5s ease;
+}
+
+.contenu-formulaire input:focus, 
+.contenu-formulaire select:focus {
+    outline: 0;
+    border-color: black;
+}
+
+.contenu-formulaire.succes input,
+.contenu-formulaire.succes select {
+    border-color: #0fd035;
+}
+
+.contenu-formulaire.erreur input,
+.contenu-formulaire.erreur select {
+    border-color: #dc1010;
+}
+
+.succes-icon, 
+.erreur-icon {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    visibility: hidden;
+}
+
+.succes-icon {
+    color: #0fd035;
+}
+
+.erreur-icon {
+    color: #dc1010;
+}
+
+.contenu-formulaire.succes .succes-icon,
+.contenu-formulaire.erreur .erreur-icon,
+.contenu-formulaire.erreur small {
+    visibility: visible;
+}
+
+#valeur-achat {
+    padding-left: 30px;
+}
+
+.input-icons {
+    position: relative;
+}
+
+.signe-dollar {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 18px;
+}
+
+.erreur-message {
+    color: #dc1010;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+.input-icons .erreur-message {
+    position: absolute;
+    top: 60px;
+    left: 5px;
+}
+
+
+#reclamation-suite {
+    display: none;
+}
+
+button,
+.button-index {
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #499cfc;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.button-index:hover {
+    background-color: #1e76ff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.93);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.button-index {
+    background-color: #3893fb;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 25px;
+    font-size: 1.5rem;
+}
+
+.button-index a {
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+}
+
+#formulaire-resultat,
+#message-adieu {
+    display: none;
+    align-items: center;
+    width: 700px;
+    height: 350px;
+}
+
+.recommencer-formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#formulaire-resultat-message p {
+    padding-bottom: 15px;
+}
+
+#recommencer-question {
+    font-size: 18px;
+}
+
+.recommencer-reponse {
+    display: flex;
+    gap: 15px;
+    width: 95%;
+}
+
+#recommencer-oui {
+    border-radius: 30px 5px 5px 30px ;
+}
+
+#recommencer-non {
+    border-radius: 5px 30px 30px 5px;
+}
+
+#message-adieu {
+    display: none;
+    justify-content: space-between;
+}
+
+#message-adieu div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+}
+
+#message-adieu small {
+    font-size: 13px;
+}
+
+#section-index p,
+#section-apropos p {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.7;
+    box-shadow: 0px 0px 30px rgba(100, 100, 100, 0.5);
+}
+
+section {
+    margin: 0 120px;
+    background-color: rgba(250, 250, 250, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+section h2 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+    cursor: default;
+}
+
+#section-soumission h3 {
+    color: black;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+}
+
+section h3 {
+    color: white;
+    font-size: 1.3rem;
+}
+
+section div {
+    padding: 10px 0;
+}
+
+section img {
+    height: auto;
+    width: 900px;
+    object-fit: cover;
+}
+
+#container {
+    display: flex;
+}
+
+#container img {
+    border-radius: 10px;
+}
+
+.section-end {
+    display: flex;
+}
+
+article {
+    margin: 10px 0;
+}
+
+#temoignage-container {
+    display: flex;
+    padding: 10px;
+    gap: 15px;
+}
+#apropos-row {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px 30px;
+    gap: 15px;
+
+}
+
+article h3 {
+    color: white;
+    margin-top: 20px;
+    padding: 10px 15px;
+    cursor: default;
+}
+
+#section-apropos article h3 {
+    margin-left: 20px;
+}
+
+article .section-mid h4 {
+    text-decoration: underline;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: default;
+}
+
+article .section-mid div {
+    background-color: rgba(250, 250, 250, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+footer{
+    background-color: rgba(250, 250, 250, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer h5 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    margin-bottom: 20px;
+    cursor: default;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-info p {
+    font-size: 16px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-info a {
+    text-decoration: underline;
+    color: black;
+}
+
+.footer-info a:hover {
+    text-decoration: none;
+}
+
+.footer-social-media {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.social-media-icons a,
+.footer-info a>i {
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.social-media-icons a:hover,
+.footer-info a>i:hover {
+    transform: scale(1.5);
+}
+
+.social-media-icons a:active,
+.footer-info a>i:active {
+    transform: scale(0.95);
+}
+
+.footer-bottom p {
+    font-size: 15px;
+    cursor: default;
+}

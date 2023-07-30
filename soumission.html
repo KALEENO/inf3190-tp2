@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumission - RouleSûr</title>
+    <script src="https://kit.fontawesome.com/d49ec2dbab.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="./index.html">
+            <div>
+                <img src="./images/logo-2.png" alt="logo" id="logo">
+                <h1>RouleSûr</h1>
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="./index.html" >Accueil</a></li>
+                <li><a href="./soumission.html" class="active">Soumission</a></li>
+                <li><a href="./apropos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="section-soumission">
+            <h2>Formulaire de soumission</h2>
+        <div>
+            <form id="formulaire">
+                <div class="contenu-formulaire">
+                    <label for="genre">Quel est votre genre?</label>
+                    <div class="input-icons">
+                        <select name="genre" id="genre">
+                            <option class="option-vide" selected disabled value="">Ce texte sera effacé par du javascript par design. Laisser option vide cause une erreur dans le validateur W3C.</option>
+                            <option value="f">Femme</option>
+                            <option value="h">Homme</option>
+                            <option value="nb">Non-binaire</option>
+                        </select>
+                        <small class="erreur-message">Choisissez un genre.</small>
+                    </div>
+                </div>
+                <div class="contenu-formulaire" id="age-form">
+                    <label for="age">Quel est votre âge?</label>
+                    <div class="input-icons">
+                        <input type="text" name="age" id="age" autocomplete="off">
+                        <span class="succes-icon"><i class="fa-solid fa-circle-check"></i></span>
+                        <span class="erreur-icon"><i class="fa-solid fa-circle-exclamation fa-bounce"></i></span>
+                        <small class="erreur-message">Entrez un âge valide (entre 0 et 150).</small>
+                    </div>
+                </div>
+                <div class="contenu-formulaire" id="valeur-achat-form">
+                    <label for="valeur-achat">Quelle est la valeur d'achat de votre véhicule?</label>
+                    <div class="input-icons">
+                        <span class="signe-dollar"><i class="fa-solid fa-dollar-sign"></i></span>
+                        <input type="text" name="valeur-achat" id="valeur-achat" autocomplete="off">
+                        <span class="succes-icon"><i class="fa-solid fa-circle-check"></i></span>
+                        <span class="erreur-icon"><i class="fa-solid fa-circle-exclamation fa-bounce"></i></span>
+                        <small class="erreur-message">Entrez une valeur d'achat valide (&ge;0$).</small>
+                    </div>
+                </div>
+                <div class="contenu-formulaire" id="annee-fabrication-form">
+                    <label for="annee-fabrication">Quelle est l'année de fabrication de votre véhicule?</label>
+                    <div class="input-icons">
+                        <input type="text" name="annee-fabrication" id="annee-fabrication" autocomplete="off">
+                        <span class="succes-icon"><i class="fa-solid fa-circle-check"></i></span>
+                        <span class="erreur-icon"><i class="fa-solid fa-circle-exclamation fa-bounce"></i></span>
+                        <small class="erreur-message">Entrez une année de fabrication valide (entre 1885 et 2023).</small>
+                    </div>
+                </div>
+                <div class="contenu-formulaire" id="reclamation-form">
+                    <label for="reclamation">Avez-vous fait des réclamations d'assurance auto dans les 6 dernières années?</label>
+                    <div class="input-icons">
+                        <select name="reclamation" id="reclamation">
+                            <option class="option-vide" selected disabled value="">Ce texte sera effacé par du javascript par design, pour empecher</option>
+                            <option value="non">Non</option>
+                            <option value="oui">Oui</option>
+                        </select>
+                        <small class="erreur-message">Choisissez une option.</small>
+                    </div>
+                </div>
+                <div class="contenu-formulaire" id="reclamation-suite">
+                    <label for="nombre-reclamations">Combien de reclamations avez-vous faites?</label> 
+                    <div class="input-icons">
+                        <input type="text" name="nombre-reclamations" id="nombre-reclamations" autocomplete="off">
+                        <span class="succes-icon"><i class="fa-solid fa-circle-check"></i></span>
+                        <span class="erreur-icon"><i class="fa-solid fa-circle-exclamation fa-bounce"></i></span>
+                        <small class="erreur-message">Entrez un nombre de réclamation valide (entre 1 et 10).</small>
+                    </div>
+                </div>
+                <button>Soumettre</button>
+            </form>
+            
+            <div id="formulaire-resultat">
+                <div id="formulaire-resultat-message">
+                    <p id="message-annuel">Le prix annuel de la soumission d'assurance:&nbsp; $</p>
+                    <p id="message-mensuel">Le prix mensuel de la soumission d'assurance:&nbsp; $</p>
+                    <p id="message-client-rejete">Désolé, nous n'avons aucun produit à offrir pour ce profil de client.</p>
+                </div>
+                <div class="recommencer-formulaire">
+                    <p id="recommencer-question">Voulez-vous faire une autre soumission?</p>
+                    <div class="recommencer-reponse">
+                        <button id="recommencer-oui">Oui</button>
+                        <button id="recommencer-non">Non</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="message-adieu">
+                <h3>Au revoir !</h3>
+                <div>
+                    <p>Nous vous remercions d'avoir choisi notre service.</p>
+                    <p>Passer une excellente journée !</p>
+                </div>
+                <small>*Votre formulaire sera soumis dans quelques instants.</small>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
