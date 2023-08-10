@@ -23,4 +23,4 @@ Ce projet est la conception d'un site web pour un compagnie d'assurance automobi
 
 ## Licence
 
-Ce projet est sous licence Apache Version 2.0. Voir le fichier [LICENSE](LICENSE) pour plus d'informations.v
+Ce projet est sous licence Apache Version 2.0. Voir le fichier [LICENSE](LICENSE) pour plus d'informations.
